@@ -52,3 +52,55 @@ p {
     cursor: pointer;
     padding-top: .5rem;
 }
+/***************************************
+********** MEDIA QUERIES ***************/
+
+@media only screen and (max-width : 1024px) {
+    
+        #app {
+            width: 50%;
+        }
+    
+    }
+    
+    @media only screen and (max-width : 768px) {
+        
+        #app {
+            width: 60%;
+        }
+        
+    }
+    
+    @media only screen and (max-width : 600px) {
+        
+        #app {
+            width: 70%;
+        }
+        
+    }
+    
+    @media only screen and (max-width : 500px) {
+        
+        #app {
+            width: 80%;
+        }
+        
+    }
+    
+    @media only screen and (max-width : 414px) {
+        
+        #app {
+            width: 90%;
+        }
+        
+    }
+    
+    @media only screen and (max-width : 320px) {
+        
+        #app {
+            width: 95%;
+        }
+        
+    }
+    
+    
