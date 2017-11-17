@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+html {
+    font-size: 15px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    transition: .5s all;
+    padding-top: 6rem;
+}
+
+#app {
+    background: white;
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: column-reverse;
+    border-radius: 5px;
+    font-family: 'Raleway' , sans-serif;
+    font-size: 2rem;
+    text-align: right;
+    padding: 1rem;
+    font-weight: thin;
+}
+
+p {
+    display: inline;
+    font-style: italic;
+    text-align: center;
+}
+
+.div_Author_Quote {
+    display: flex;
+    flex-flow: column;
+}
+
+.author {
+    padding-bottom: 2rem;
+}
+
+.quote_button {
+    height: 2.5rem;
+    width: 8rem;
+    border: none;
+    border-radius: 3px;
+    transition: .5s all;
+    color: white;
+    font-size: 1rem;
+    outline: none;
+    cursor: pointer;
+    padding-top: .5rem;
+}
