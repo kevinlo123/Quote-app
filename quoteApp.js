@@ -52,6 +52,13 @@ document.addEventListener("DOMContentLoaded" , () => {
         backgroundAndTextColorChange(); // function containing style changes being called
     });
 
+    /**************** TWEET QUOTE BUTTON EVENT HANDLER ************/
+    tweetButton.addEventListener("click" , () => {
+        let twitterQuote = quote.innerText;
+        let quoteAuthor = author.innerText;
+        window.open('https://twitter.com/intent/tweet?text=' + twitterQuote + " " + quoteAuthor, '_blank');
+    });
+
     /**************** NEW QUOTE ON LOAD ************/
     const ajaxRequest = () => {
         $.ajax({
