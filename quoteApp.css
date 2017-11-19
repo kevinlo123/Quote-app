@@ -40,7 +40,12 @@ p {
     padding-bottom: 2rem;
 }
 
-.quote_button {
+.buttons_container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.quote_button , .tweet_button {
     height: 2.5rem;
     width: 8rem;
     border: none;
@@ -50,57 +55,53 @@ p {
     font-size: 1rem;
     outline: none;
     cursor: pointer;
-    padding-top: .5rem;
+}
+
+.tweet_button {
+    width: 3rem;
+    font-size: 1.5rem;
 }
 /***************************************
 ********** MEDIA QUERIES ***************/
 
 @media only screen and (max-width : 1024px) {
+      #app {
+        width: 50%;
+    }   
+}
     
-        #app {
-            width: 50%;
-        }
-    
+@media only screen and (max-width : 768px) {
+    #app {
+        width: 60%;
     }
+}
     
-    @media only screen and (max-width : 768px) {
-        
-        #app {
-            width: 60%;
-        }
-        
+@media only screen and (max-width : 600px) {
+     #app {
+        width: 70%;
+        font-size: 1.5rem;
     }
+}
     
-    @media only screen and (max-width : 600px) {
+@media only screen and (max-width : 500px) {
         
-        #app {
-            width: 70%;
-        }
-        
+    #app {
+        width: 80%;
     }
+}
     
-    @media only screen and (max-width : 500px) {
+@media only screen and (max-width : 414px) {
         
-        #app {
-            width: 80%;
-        }
-        
+    #app {
+        width: 90%;
     }
+}
     
-    @media only screen and (max-width : 414px) {
+@media only screen and (max-width : 320px) {
         
-        #app {
-            width: 90%;
-        }
-        
-    }
-    
-    @media only screen and (max-width : 320px) {
-        
-        #app {
+    #app {
             width: 95%;
-        }
-        
     }
+}
     
     
