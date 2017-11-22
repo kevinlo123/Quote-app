@@ -41,12 +41,15 @@ document.addEventListener("DOMContentLoaded" , () => {
             $.ajax({ //request again so that when the button is clicked the new quote being recieved is replacing the old on load quote
                 cache: false, //SET CACHE TO FALSE WITHOUT IT NEW QUOTE WONT APPEAR
                 type: "GET",
-                url: "https://cors-anywhere.herokuapp.com/http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1",
+                url: "https://cors-anywhere.herokuapp.com/http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1", 
                 success: response => {
                     quote.innerHTML = "&ldquo;" + response["0"].content + "&rdquo;"; //new quote
                     author.innerHTML = "-" + response["0"].title; //new author          
                     console.log("new quote is replacing old quote as well as author");
-                }
+                },
+                error: function(error){
+                    console.log(error);
+                }  
             });
         }
         backgroundAndTextColorChange(); // function containing style changes being called
@@ -70,7 +73,10 @@ document.addEventListener("DOMContentLoaded" , () => {
                 quote.innerHTML = "&ldquo;" + response["0"].content + "&rdquo;"; //response data being shown in HTML as quotes paragraph element
                 author.innerHTML = "-" + response["0"].title; //author being shown through the authors span element           
                 backgroundAndTextColorChange();//calling style change function                
-            }
+            },
+            error: function(error){
+                console.log(error);
+            }  
         });
     }
     ajaxRequest(); // calling function for request on load
